@@ -11,48 +11,28 @@ class MPU6050Node(Node):
     def __init__(self):
         super().__init__('mpu6050_node')
 
-        # Create publishers for acceleration and gyroscope data
+        # Publisher for acceleration data
         self.pub_accel = self.create_publisher(Float32MultiArray, 'mpu6050/acceleration', 10)
+        # Publisher for gyroscope data
         self.pub_gyro = self.create_publisher(Float32MultiArray, 'mpu6050/gyroscope', 10)
 
-        # Open the serial port (adjust the port and baud rate as needed)
-        self.ser = serial.Serial('/dev/ttyACM0', 115200)  # Change to your Arduino's port
-
-        # Create a timer to read data at a fixed rate
-        self.timer = self.create_timer(0.01, self.read_serial_data)  # 100 Hz
-
-import rclpy
-from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray
-import serial
-import re
-
-class MPU6050Node(Node):
-    def __init__(self):
-        super().__init__('mpu6050_node')
-
-        # Publisher für Beschleunigungsdaten
-        self.pub_accel = self.create_publisher(Float32MultiArray, 'mpu6050/acceleration', 10)
-        # Publisher für Gyroskopdaten
-        self.pub_gyro = self.create_publisher(Float32MultiArray, 'mpu6050/gyroscope', 10)
-
-        # Serielle Verbindung zum Arduino (Anpassen des Ports und der Baudrate falls nötig)
+        # Serial connection to Arduino (adjust the port and baud rate if necessary)
         self.ser = serial.Serial('/dev/ttyACM0', 115200)
 
-        # Timer, der alle 0,1 Sekunden (10 Hz) die Callback-Funktion aufruft
+        # Timer that calls the callback function every 0.1 seconds (10 Hz)
         self.timer = self.create_timer(0.1, self.read_serial_data)
 
     def read_serial_data(self):
         if self.ser.in_waiting > 0:
-            # Lese eine Zeile, dekodiere sie mit latin-1 und entferne überflüssige Leerzeichen
+            # Read a line, decode it with latin-1 and remove extra spaces
             line = self.ser.readline().decode('latin-1').strip()
-            self.get_logger().info(f"Empfangene Zeile: {line}")
+            self.get_logger().info(f"Received line: {line}")
 
-            # Regex zum Extrahieren der Beschleunigungsdaten:
-            # Beispiel-Format: "Acceleration X: -2.62, Y: 8.15, Z: 4.75 m/s^2"
+            # Regex to extract acceleration data:
+            # Example format: "Acceleration X: -2.62, Y: 8.15, Z: 4.75 m/s^2"
             accel_regex = r'Acceleration X:\s*([-\d.]+),\s*Y:\s*([-\d.]+),\s*Z:\s*([-\d.]+) m/s\^?2'
-            # Regex zum Extrahieren der Gyroskopdaten:
-            # Beispiel-Format: "Rotation X: -0.04, Y: 0.01, Z: -0.03 rad/s"
+            # Regex to extract gyroscope data:
+            # Example format: "Rotation X: -0.04, Y: 0.01, Z: -0.03 rad/s"
             gyro_regex = r'Rotation X:\s*([-\d.]+),\s*Y:\s*([-\d.]+),\s*Z:\s*([-\d.]+) rad/s'
 
             match_accel = re.search(accel_regex, line)
@@ -67,11 +47,11 @@ class MPU6050Node(Node):
                 gy = float(match_gyro.group(2))
                 gz = float(match_gyro.group(3))
 
-                # Erstellen und Publizieren der Nachricht für Beschleunigung
+                # Create and publish message for acceleration
                 accel_msg = Float32MultiArray(data=[ax, ay, az])
                 self.pub_accel.publish(accel_msg)
 
-                # Erstellen und Publizieren der Nachricht für Gyroskop
+                # Create and publish message for gyroscope
                 gyro_msg = Float32MultiArray(data=[gx, gy, gz])
                 self.pub_gyro.publish(gyro_msg)
 
