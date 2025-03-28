@@ -1,2 +1,0 @@
-[console_scripts]
-leap_imu = leap_imu.leap_imu:main

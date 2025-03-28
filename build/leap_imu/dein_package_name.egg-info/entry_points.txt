@@ -1,2 +1,0 @@
-[console_scripts]
-mpu6050_node = dein_package_name.mpu6050_node:main
