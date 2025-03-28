@@ -45,3 +45,11 @@ ros2 topic echo /mpu6050/acceleration
 ```sh
 ros2 topic echo /mpu6050/gyroscope
 ```
+
+## Uploading the Arduino Code
+
+To upload the Arduino sketch:
+- Install the Arduino IDE.
+- Open the file "arduino_code.ino" with the IDE.
+- Compile and upload the sketch to your Arduino.
+- Import any missing libraries if prompted.
