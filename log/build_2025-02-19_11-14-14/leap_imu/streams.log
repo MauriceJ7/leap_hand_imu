@@ -1,0 +1,24 @@
+[0.354s] Invoking command in '/home/parallels/ros2_imu_ws/src/leap_hand_imu': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/parallels/ros2_imu_ws/build/leap_imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_imu build --build-base /home/parallels/ros2_imu_ws/build/leap_imu/build install --record /home/parallels/ros2_imu_ws/build/leap_imu/install.log --single-version-externally-managed install_data
+[0.453s] running egg_info
+[0.459s] writing ../../build/leap_imu/leap_imu.egg-info/PKG-INFO
+[0.460s] writing dependency_links to ../../build/leap_imu/leap_imu.egg-info/dependency_links.txt
+[0.461s] writing entry points to ../../build/leap_imu/leap_imu.egg-info/entry_points.txt
+[0.461s] writing requirements to ../../build/leap_imu/leap_imu.egg-info/requires.txt
+[0.461s] writing top-level names to ../../build/leap_imu/leap_imu.egg-info/top_level.txt
+[0.474s] reading manifest file '../../build/leap_imu/leap_imu.egg-info/SOURCES.txt'
+[0.475s] writing manifest file '../../build/leap_imu/leap_imu.egg-info/SOURCES.txt'
+[0.475s] running build
+[0.475s] running build_py
+[0.475s] copying leap_imu/leap_imu.py -> /home/parallels/ros2_imu_ws/build/leap_imu/build/lib/leap_imu
+[0.475s] running install
+[0.477s] running install_lib
+[0.484s] copying /home/parallels/ros2_imu_ws/build/leap_imu/build/lib/leap_imu/leap_imu.py -> /home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages/leap_imu
+[0.485s] byte-compiling /home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages/leap_imu/leap_imu.py to leap_imu.cpython-312.pyc
+[0.485s] running install_data
+[0.485s] running install_egg_info
+[0.492s] removing '/home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages/leap_imu-0.0.0-py3.12.egg-info' (and everything under it)
+[0.492s] Copying ../../build/leap_imu/leap_imu.egg-info to /home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages/leap_imu-0.0.0-py3.12.egg-info
+[0.493s] running install_scripts
+[0.547s] Installing leap_imu script to /home/parallels/ros2_imu_ws/install/leap_imu/lib/leap_imu
+[0.547s] writing list of installed files to '/home/parallels/ros2_imu_ws/build/leap_imu/install.log'
+[0.584s] Invoked command in '/home/parallels/ros2_imu_ws/src/leap_hand_imu' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/parallels/ros2_imu_ws/build/leap_imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_imu build --build-base /home/parallels/ros2_imu_ws/build/leap_imu/build install --record /home/parallels/ros2_imu_ws/build/leap_imu/install.log --single-version-externally-managed install_data

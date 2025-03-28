@@ -1,0 +1,8 @@
+running egg_info
+creating ../../build/leap_imu/dein_package_name.egg-info
+writing ../../build/leap_imu/dein_package_name.egg-info/PKG-INFO
+writing dependency_links to ../../build/leap_imu/dein_package_name.egg-info/dependency_links.txt
+writing entry points to ../../build/leap_imu/dein_package_name.egg-info/entry_points.txt
+writing requirements to ../../build/leap_imu/dein_package_name.egg-info/requires.txt
+writing top-level names to ../../build/leap_imu/dein_package_name.egg-info/top_level.txt
+writing manifest file '../../build/leap_imu/dein_package_name.egg-info/SOURCES.txt'

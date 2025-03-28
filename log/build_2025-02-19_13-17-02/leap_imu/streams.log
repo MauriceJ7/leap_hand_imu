@@ -1,0 +1,11 @@
+[0.314s] Invoking command in '/home/parallels/ros2_imu_ws/src/leap_hand_imu': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/parallels/ros2_imu_ws/build/leap_imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_imu build --build-base /home/parallels/ros2_imu_ws/build/leap_imu/build install --record /home/parallels/ros2_imu_ws/build/leap_imu/install.log --single-version-externally-managed install_data
+[0.413s] running egg_info
+[0.414s] creating ../../build/leap_imu/dein_package_name.egg-info
+[0.421s] writing ../../build/leap_imu/dein_package_name.egg-info/PKG-INFO
+[0.421s] writing dependency_links to ../../build/leap_imu/dein_package_name.egg-info/dependency_links.txt
+[0.421s] writing entry points to ../../build/leap_imu/dein_package_name.egg-info/entry_points.txt
+[0.421s] writing requirements to ../../build/leap_imu/dein_package_name.egg-info/requires.txt
+[0.421s] writing top-level names to ../../build/leap_imu/dein_package_name.egg-info/top_level.txt
+[0.421s] writing manifest file '../../build/leap_imu/dein_package_name.egg-info/SOURCES.txt'
+[0.428s] error: package directory 'dein_package_name' does not exist
+[0.440s] Invoked command in '/home/parallels/ros2_imu_ws/src/leap_hand_imu' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/parallels/ros2_imu_ws/build/leap_imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/ros2_imu_ws/install/leap_imu/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/leap_imu build --build-base /home/parallels/ros2_imu_ws/build/leap_imu/build install --record /home/parallels/ros2_imu_ws/build/leap_imu/install.log --single-version-externally-managed install_data
